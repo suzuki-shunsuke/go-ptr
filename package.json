@@ -1,0 +1,16 @@
+{
+  "name": "go-ptr",
+  "version": "0.1.0",
+  "scripts": {
+    "release": "standard-version",
+    "commitmsg": "validate-commit-msg",
+    "test": "go test ./... -covermode=atomic",
+    "coverage": "bash coverage.sh",
+    "fmt": "git ls-files | grep .go | xargs gofmt -l -s -w"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "standard-version": "^4.3.0",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
