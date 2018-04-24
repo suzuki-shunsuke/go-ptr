@@ -22,11 +22,11 @@ func TestPInt(t *testing.T) {
 
 func TestPBool(t *testing.T) {
 	a := ptr.PBool(false)
-	if *a == true {
+	if *a {
 		t.Fatal(`*a = true, wanted false`)
 	}
 	a = ptr.PBool(true)
-	if *a == false {
+	if !*a {
 		t.Fatal(`*a = false, wanted true`)
 	}
 }
