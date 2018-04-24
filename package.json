@@ -6,6 +6,7 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "go test ./... -covermode=atomic",
     "coverage": "bash coverage.sh",
+    "lint": "bash lint.sh",
     "fmt": "git ls-files | grep .go | xargs gofmt -l -s -w",
     "commitlint-travis": "commitlint-travis"
   },
