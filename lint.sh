@@ -4,11 +4,8 @@ echo "+ gofmt"
 ! git ls-files | grep .go | xargs gofmt -s -d | grep '^'
 echo "+ go vet"
 go vet $(go list ./... | grep -v /vendor/)
-# https://github.com/golang/lint/issues/397
-if which golint &> /dev/null; then
-  echo "+ golint"
-  golint ./...
-fi
+echo "+ golint"
+golint ./...
 echo "+ gosimple"
 ! gosimple ./... | grep '^'
 echo "+ unused"
