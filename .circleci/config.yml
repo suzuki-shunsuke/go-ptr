@@ -1,0 +1,13 @@
+---
+version: 2
+jobs:
+  build:
+    docker:
+    - image: suzukishunsuke/go-ci:0.1.0-0
+    working_directory: /go/src/github.com/suzuki-shunsuke/go-ptr
+    steps:
+    - checkout
+    - run: npm i
+    - run: bash commitlint-circleci.sh
+    - run: npm run lint
+    - run: go test -coverprofile=coverage.txt -covermode=atomic
