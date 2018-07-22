@@ -1,7 +1,6 @@
 # go-ptr
 
 [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/suzuki-shunsuke/go-ptr)
-[![Build Status](https://travis-ci.org/suzuki-shunsuke/go-ptr.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/go-ptr)
 [![CircleCI](https://circleci.com/gh/suzuki-shunsuke/go-ptr.svg?style=svg)](https://circleci.com/gh/suzuki-shunsuke/go-ptr)
 [![codecov](https://codecov.io/gh/suzuki-shunsuke/go-ptr/branch/master/graph/badge.svg)](https://codecov.io/gh/suzuki-shunsuke/go-ptr)
 [![Go Report Card](https://goreportcard.com/badge/github.com/suzuki-shunsuke/go-ptr)](https://goreportcard.com/report/github.com/suzuki-shunsuke/go-ptr)
