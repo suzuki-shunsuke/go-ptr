@@ -11,3 +11,4 @@ jobs:
     - run: bash commitlint-circleci.sh
     - run: npm run lint
     - run: go test -coverprofile=coverage.txt -covermode=atomic
+    - run: bash <(curl -s https://codecov.io/bash)
