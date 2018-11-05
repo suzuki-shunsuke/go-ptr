@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "scripts": {
     "release": "standard-version",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "go test ./... -covermode=atomic",
     "coverage": "bash scripts/coverage.sh",
     "fmt": "bash scripts/fmt.sh",
     "lint": "gometalinter ./...",
     "vet": "go vet ./...",
     "ci-local": "circleci build -e LOCAL=true"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
