@@ -3,12 +3,12 @@ version: 2
 jobs:
   build:
     docker:
-    - image: suzukishunsuke/go-ci:0.1.0-0
+    - image: suzukishunsuke/go-ci:0.5.0
     working_directory: /go/src/github.com/suzuki-shunsuke/go-ptr
     steps:
     - checkout
     - run: npm i
-    - run: bash commitlint-circleci.sh
+    - run: bash scripts/commitlint-circleci.sh
     - run: npm run lint
-    - run: go test -coverprofile=coverage.txt -covermode=atomic
-    - run: bash <(curl -s https://codecov.io/bash)
+    - run: bash scripts/codecov-test.sh
+    - run: test "$LOCAL" == "true" || bash <(curl -s https://codecov.io/bash)
