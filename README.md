@@ -10,7 +10,7 @@
 
 golang library to convert a literal to pointer.
 
-To be honest, this library is very trivial.
+This library is very trivial.
 If there are any other ways to get a pointer of the literal value, please tell us.
 
 ## Motivation
