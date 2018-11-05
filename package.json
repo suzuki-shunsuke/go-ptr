@@ -5,10 +5,11 @@
     "release": "standard-version",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "go test ./... -covermode=atomic",
-    "coverage": "bash coverage.sh",
-    "lint": "bash lint.sh",
-    "fmt": "go list -f \"{{.Dir}}\" ./... | xargs gofmt -l -s -w",
-    "commitlint-travis": "commitlint-travis"
+    "coverage": "bash scripts/coverage.sh",
+    "fmt": "bash scripts/fmt.sh",
+    "lint": "gometalinter ./...",
+    "vet": "go vet ./...",
+    "ci-local": "circleci build -e LOCAL=true"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",
